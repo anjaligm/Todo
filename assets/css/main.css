@@ -1,0 +1,114 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: beige;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+nav ul,
+nav li {
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-link {
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ff74b3;
+    padding-top: 5px;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    text-decoration: none;
+    color: #ff74b3;
+    opacity: 0.7;
+}
+
+.completed{
+   background: #ddd;
+}
+.pending{
+    background: #fefefe;
+}
+.header-section h3{
+    display: inline-block;
+    margin-top: 0;
+    color:#202020;
+    text-transform: capitalize;
+}
+.category-container{
+    background: lightskyblue;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    min-height: 300px;
+    max-height:300px;
+
+}
+
+.todo-container ul{
+    padding-left: 0;
+}
+.todoItem-container{
+    padding:3%;
+    overflow: scroll;
+    height: 250px;
+}
+.todo-container ul li{
+    list-style: none;
+    padding:10px;
+    margin-bottom: 5px;
+    border-bottom:1px solid #f0f0f0;
+}
+.no-padding{
+    padding:0 !important;
+}
+.marT30{
+    margin-top: 30px;
+}
+.todo-container .glyphicon{
+    font-size:22px !important;
+    margin-right:5px;
+}
+.close-icon{
+    position: relative;
+    margin:-12px -12px 0 0;
+    font-size:25px;
+    color: brown;
+}
+.Todo-title{
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+}
+.marL0{
+    margin-left: 0;
+}
+.todoForm{
+    position: absolute;
+    bottom:0;
+    right:5px;
+    left:5px;
+}
+.remove-icon{
+    color: indianred;
+}
+.ok-icon{
+    color:lightgreen;
+}

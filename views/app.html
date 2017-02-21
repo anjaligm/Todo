@@ -1,0 +1,50 @@
+<div class="container">
+    <h2 class='text-center'>My Todo List</h2>
+    
+    <div class="btn btn-success" ng-click="showaddcatdiv=true">
+    <span class="glyphicon glyphicon-plus"></span> Add New List  
+
+    </div>
+    
+<div class="row marT30" ng-show="showaddcatdiv">
+    <div class="col-md-3">
+        <form name="todoCatForm" ng-submit="todoCatForm.$valid && todoCatAdd(todoCatTitle)">
+        <div class="form-group">
+        <input type="text" text-only class="form-control" ng-model="todoCatTitle" size="50" placeholder="Add New List" ng-required='true'>
+        </div>
+    </form>
+    </div>
+    </div>
+    <div class="row marT30 marL0">
+    <div class="col-xs-10 col-sm-4 col-md-3 no-padding category-container" ng-repeat="category in categoryList track by $index">
+     <span class="glyphicon glyphicon-remove-circle pull-right close-icon" ng-click='deleteTodoCategory(categoryList,category)'></span>
+    <div class="clearfix"></div>
+    <div class="todoItem-container">  
+    <div class="header-section text-center">
+    <h3 contentEditable="true" ng-model='category.title'>{{category.title}}
+    </h3>
+    </div>
+    
+    <div class="todo-container">
+    <ul>
+    <li ng-repeat="item in category.todoList track by $index" ng-class="{'completed':item.done,'pending':!item.done}">
+        <span contentEditable="true" class='Todo-title' ng-model='item.title'>{{item.title}}</span>
+        
+        <span class="glyphicon remove-icon glyphicon-remove-circle pull-right" ng-click='deleteTodo(category.todoList,item)'></span>
+        <span class="glyphicon ok-icon glyphicon-ok-circle pull-right" ng-click='completeTodo(item)'></span>
+        </li>
+    </ul>
+    <form name="todoform" class="todoForm" ng-submit="todoform.$valid && todoAdd(category,{title:todoformObj[$index].todoInput,done:false},todoformObj[$index])">
+        <div class="form-group">
+        <input type="text" class="form-control" name="todofield" ng-model="todoformObj[$index].todoInput" size="50" placeholder="Add New Task" ng-required="true">
+        <!-- <button class="btn btn-primary" ng-disabled="!todoInput">Add Todo</button> -->
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+</div>
+
